@@ -1,4 +1,4 @@
-class ArtistsController < ApplicationController
+class ArtistsController < OpenReadController
   before_action :set_artist, only: [:show, :update, :destroy]
 
   # GET /artists
@@ -15,7 +15,7 @@ class ArtistsController < ApplicationController
 
   # POST /artists
   def create
-    @artist = Artist.new(artist_params)
+    @artist = current_user.artists.build(artist_params)
 
     if @artist.save
       render json: @artist, status: :created, location: @artist
@@ -49,3 +49,5 @@ class ArtistsController < ApplicationController
       params.require(:artist).permit(:name, :genre, :user_id)
     end
 end
+
+# params.require(:artist).permit(:name, :genre, :user_id)

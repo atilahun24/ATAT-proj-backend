@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class ArtistsController < OpenReadController
+class ArtistsController < ProtectedController
   before_action :set_artist, only: %i[show update destroy]
 
   # GET /artists

@@ -18,7 +18,7 @@ heroku link: https://infinite-refuge-46808.herokuapp.com/
 
 link to other repo: https://github.com/atilahun24/ATAT-client
 
-Technologies used: HTML, CSS, Javascript, handlebars, jQuery
+Technologies used: ruby, ruby on rails
 
 unsolved problems: no problems per se but there are features that I was hoping
 to add that I was unable to. One would be displaying concerts for the user's
